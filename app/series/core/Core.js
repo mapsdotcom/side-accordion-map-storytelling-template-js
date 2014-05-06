@@ -81,7 +81,10 @@ define(["esri/map",
 									configOptions.webmaps[i].title = item;
 							});
 						}
-						if(response.values.syncMaps !== undefined) {configOptions.syncMaps = response.values.syncMaps;}
+						if (response.values.syncMaps !== undefined) { configOptions.syncMaps = response.values.syncMaps; }
+
+					  //custom properties
+						if (response.values.maximumZoom !== undefined) { configOptions.maximumZoom = response.values.maximumZoom; }
 						
 						loadMaps();
 						initBanner();
@@ -126,7 +129,8 @@ define(["esri/map",
 			var mapDeferred = esri.arcgis.utils.createMap(configOptions.webmaps[app.maps.length].id,"map"+app.maps.length,{
 				mapOptions: {
 					extent: getExtent(),
-					infoWindow: popup
+					infoWindow: popup,
+					maxZoom: getMaxZoom()
 				},
 				bingMapsKey: configOptions.bingmapskey
 			});
@@ -226,6 +230,15 @@ define(["esri/map",
 			if(configOptions.syncMaps && app.maps.length > 0){
 				return (app.maps[0].extent);
 			}
+		}
+
+		function getMaxZoom() {
+		  if (configOptions.maximumZoom != undefined && configOptions.maximumZoom > 0) {
+		    return configOptions.maximumZoom;
+		  }
+		  else {
+		    return -1;
+		  }
 		}
 
 		function createAppItems(map,layers,index)

@@ -13,6 +13,12 @@
       "tooltip": "Specify a subtitle for the application",
       "placeHolder": "Subtitle",
       "label": "Subtitle:"
+    },{
+      "type": "number",
+      "fieldName": "maximumZoom",
+      "tooltip": "Specify the highest zoom level allowed (0 - 20)",
+      "label": "Maximum Zoom:",
+      "constraints" :{min:0,max:20,places:0}
     }]
   },{
     "category": "<b>Webmaps</b>",

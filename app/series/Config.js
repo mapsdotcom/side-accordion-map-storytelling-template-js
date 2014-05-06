@@ -77,7 +77,9 @@ define([],
 			//If the webmap uses Bing Maps data, you will need to provided your Bing Maps Key
 			bingmapskey : "",
 			//Modify this to point to your sharing service URL if you are using the portal
-			sharingurl: "http://www.arcgis.com/sharing/rest/content/items"
+			sharingurl: "http://www.arcgis.com/sharing/rest/content/items",
+		  //Maximum zoom level allowed in the storymap (0 - 20)
+		  maximumZoom: 20
 		}
 	}
 );
