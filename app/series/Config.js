@@ -79,7 +79,33 @@ define([],
 			//Modify this to point to your sharing service URL if you are using the portal
 			sharingurl: "http://www.arcgis.com/sharing/rest/content/items",
 		  //Maximum zoom level allowed in the storymap (0 - 20)
-		  maximumZoom: 20
+			maximumZoom: 20,
+
+      //Social Media Configurations
+		  //Include logo in header
+		  includeLogo: false,
+		  //Logo Image URL for header logo:
+		  logoImgUrl: "",
+		  //URL to load when logo is clicked:
+		  logoClickThru: "",
+		  //Include Social Media Links in header:
+		  includeSocialMedia: false,
+		  //Some text to precede the social media links:
+		  socialText: "",
+		  //Social Text click-thru URL - URL to load when the Social text is clicked:
+		  socialLink: "",
+		  //ShareThis Publisher ID:
+		  shareThisPubId: "",
+		  //ShareThis Twitter Handle - When map is shared via twitter, what Twitter handle should be cited:
+		  twitterViaHandle: "",
+
+		  //Pop-up Configurations
+		  //Specify a custom popup width (in pixels) to override application default (min:0,max:1000):
+		  popupWidth: undefined,
+		  //Specify a maximum popup height (in pixels) to override application default (min:0,max:1000). Only used if popupWidth is specified
+		  popupMaxHeight: undefined,
+		  //Include 'Zoom out' link button in popups:
+		  popupIncludeZoomOutLink: true
 		}
 	}
 );

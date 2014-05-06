@@ -3,7 +3,8 @@ define(["esri/map",
 		"esri/layout",
 		"esri/widgets",
 		"dojo/has",
-		"storymaps/utils/Helper",
+		"dojo/query",
+    "storymaps/utils/Helper",
 		"storymaps/ui/TimeSlider"],
 	function(
 		Map,
@@ -11,6 +12,7 @@ define(["esri/map",
 		Layout,
 		Widgets,
 		Has,
+    query,
 		Helper,
 		TimeSlider)
 	{
@@ -85,7 +87,18 @@ define(["esri/map",
 
 					  //custom properties
 						if (response.values.maximumZoom !== undefined) { configOptions.maximumZoom = response.values.maximumZoom; }
-						
+						if (response.values.includeLogo !== undefined) { configOptions.includeLogo = response.values.includeLogo; }
+						if (response.values.logoImgUrl !== undefined) { configOptions.logoImgUrl = response.values.logoImgUrl; }
+						if (response.values.logoClickThru !== undefined) { configOptions.logoClickThru = response.values.logoClickThru; }
+						if (response.values.includeSocialMedia !== undefined) { configOptions.includeSocialMedia = response.values.includeSocialMedia; }
+						if (response.values.socialText !== undefined) { configOptions.socialText = response.values.socialText; }
+						if (response.values.socialLink !== undefined) { configOptions.socialLink = response.values.socialLink; }
+						if (response.values.shareThisPubId !== undefined) { configOptions.shareThisPubId = response.values.shareThisPubId; }
+						if (response.values.twitterViaHandle !== undefined) { configOptions.twitterViaHandle = response.values.twitterViaHandle; }
+						if (response.values.popupWidth !== undefined) { configOptions.popupWidth = response.values.popupWidth; }
+						if (response.values.popupMaxHeight !== undefined) { configOptions.popupMaxHeight = response.values.popupMaxHeight; }
+						if (response.values.popupIncludeZoomOutLink !== undefined) { configOptions.popupIncludeZoomOutLink = response.values.popupIncludeZoomOutLink; }
+
 						loadMaps();
 						initBanner();
 					},
@@ -109,6 +122,36 @@ define(["esri/map",
 			if (configOptions.webmaps.length < 2){
 				$("#mobile-navigation").hide();
 				Helper.resetLayout();
+			}
+
+			if (configOptions.includeSocialMedia == false) {
+			  $("#social").hide();
+			}
+			else {
+			  if (configOptions.shareThisPubId != undefined && configOptions.shareThisPubId != null) {
+			    stLight.options({ publisher: configOptions.shareThisPubId });
+			  }
+			  if (configOptions.socialText != undefined && configOptions.socialText != null) {
+			    $("#smLink").text(configOptions.socialText);
+			  }
+			  if (configOptions.socialLink != undefined && configOptions.socialLink != null) {
+			    $("#smLink").attr('href', configOptions.socialLink);
+			  }
+			  if (configOptions.twitterViaHandle != undefined && configOptions.twitterViaHandle != null) {
+			    $("span.st_twitter").attr('st_via', configOptions.twitterViaHandle);
+			  }
+			}
+
+			if (configOptions.includeLogo == false) {
+			  $("#logo").hide();
+			}
+			else {
+			  if (configOptions.logoClickThru != undefined && configOptions.logoClickThru != null && configOptions.logoClickThru != "") {
+			    $("#logoLink").attr('href', configOptions.logoClickThru);
+			  }
+			  if (configOptions.logoImgUrl != undefined && configOptions.logoImgUrl != null && configOptions.logoImgUrl != "") {
+			    $("#logoImg").attr('src', configOptions.logoImgUrl);
+			  }
 			}
 
 			//First layout setup called on app load
@@ -185,6 +228,28 @@ define(["esri/map",
 					}
 				});
 
+			  //Begin popup configurations added to the original storymap template
+				if (configOptions.popupIncludeZoomOutLink != undefined && configOptions.popupIncludeZoomOutLink != null && configOptions.popupIncludeZoomOutLink == true) {
+				  var zoomOutLink = dojo.create("a", {
+				    "class": "action",
+				    "id": "zoomOutLink",
+				    "innerHTML": "Zoom out",
+				    "href": "#",
+				    "onclick": "return false;"
+				  }, dojo.query(".actionList", map.infoWindow.domNode)[0]);
+
+				  dojo.connect(zoomOutLink, "click", zoomToHomeExtent);
+				}
+
+				if (configOptions.popupMaxHeight == undefined || configOptions.popupMaxHeight == null || configOptions.popupMaxHeight == 0) {
+				  configOptions.popupMaxHeight = 600;
+				}
+
+				if (configOptions.popupWidth != undefined && configOptions.popupWidth != null && configOptions.popupWidth > 0) {
+				  map.infoWindow.resize(configOptions.popupWidth, configOptions.popupMaxHeight);
+				}
+			  //End added configurations
+
 				dojo.connect(map,"onExtentChange",function(){
 					if (configOptions.syncMaps && map === app.currentMap){
 						Helper.syncMaps(app.maps,app.currentMap,map.extent);
@@ -223,6 +288,10 @@ define(["esri/map",
 				createAccordionPanel(app.maps.length,response);
 
 			});
+		}
+
+		function zoomToHomeExtent() {
+		  app.currentMap.setExtent(app.maps[0]._mapParams.extent);
 		}
 
 		function getExtent()
