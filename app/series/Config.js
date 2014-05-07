@@ -85,7 +85,7 @@ define([],
 		  //Include logo in header
 		  includeLogo: true,
 		  //Logo Image URL for header logo:
-		  logoImgUrl: "images/app/MapscomLogo.png",
+		  logoImgUrl: "resources/images/app/MapscomLogo.png",
 		  //URL to load when logo is clicked:
 		  logoClickThru: "http://www.maps.com",
 		  //Include Social Media Links in header:
