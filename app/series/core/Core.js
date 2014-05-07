@@ -228,6 +228,15 @@ define(["esri/map",
 					}
 				});
 
+				var customZoomToLink = dojo.create("a", {
+				  "class": "action",
+				  "id": "customZoomToLink",
+				  "innerHTML": "custom Zoom to",
+				  "href": "#",
+				  "onclick": "return false;"
+				}, dojo.query(".actionList", map.infoWindow.domNode)[0]);
+				dojo.connect(customZoomToLink, "click", function () { alert("custom zoom!"); });
+
 			  //Begin popup configurations added to the original storymap template
 				if (configOptions.popupIncludeZoomOutLink != undefined && configOptions.popupIncludeZoomOutLink != null && configOptions.popupIncludeZoomOutLink == true) {
 				  var zoomOutLink = dojo.create("a", {
@@ -240,6 +249,8 @@ define(["esri/map",
 
 				  dojo.connect(zoomOutLink, "click", zoomToHomeExtent);
 				}
+
+				dojo.disconnect(map.infoWindow._eventConnections[4]);
 
 				if (configOptions.popupMaxHeight == undefined || configOptions.popupMaxHeight == null || configOptions.popupMaxHeight == 0) {
 				  configOptions.popupMaxHeight = 600;
@@ -400,6 +411,18 @@ define(["esri/map",
 				$("#side-pane").stop(true,true).slideUp();
 				$("#legend-pane").stop(true,true).slideUp();
 			});
+
+			
+			//var zoomToNode = dojo.query("a.action.zoomTo");
+		  //dojo.connect(zoomToNode, "click", function () { alert("zoom to override with dojo.connect"); });
+
+			$('.action.zoomTo').click(customZoomTo);
+		}
+
+		function customZoomTo(evt) {
+		  //alert('zoom to override with jQuery');
+		  var thisFeatureExtent = app.currentMap.infoWindow.features[0]._extent;
+		  app.currentMap.setExtent(thisFeatureExtent);
 		}
 
 		function setLegendToggle()
