@@ -191,6 +191,9 @@ define(["esri/map",
 					new TimeSlider("slider" + app.maps.length, map, response.itemInfo.itemData.widgets.timeSlider.properties,configOptions.webmaps[app.maps.length].showSingleTimeInstance);
 				}
 
+				if (configOptions.webmaps[app.maps.length].legendVisible == undefined) {
+				  configOptions.webmaps[app.maps.length].legendVisible = true;
+				}
 				map.legendVisible = configOptions.webmaps[app.maps.length].legendVisible;
 				map.openLegendOnChange = configOptions.webmaps[app.maps.length].openLegendOnChange;
 
