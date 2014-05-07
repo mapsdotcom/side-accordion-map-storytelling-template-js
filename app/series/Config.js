@@ -7,8 +7,8 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-				id: "04744b7ad124458489ea821da3129352",
-				title: "",
+			  id: "dafe2a75aae14712a6fafa7703ca4bdd",
+			  title: "Federal Judicial Circuits",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
@@ -16,18 +16,8 @@ define([],
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
 			},{
-				id: "d0f1c5ae11d24c778d597f8bbddcf85f",
-				title: "",
-				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-				showSingleTimeInstance: false,
-				// Hide legend and legend toggle for specific map by setting this option to false
-				legendVisible: true,
-				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
-				openLegendOnChange: false
-			},
-			{
-				id: "bb5a3da962ac4040b2f52f5869fddbd8",
-				title: "",
+			  id: "ed5582c81d0d4b1d8bda153d95f53b18",
+			  title: "Population Density",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
@@ -61,7 +51,7 @@ define([],
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.
-			title: "",
+			title: "The Federal Judicial Circuits",
 			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
 			subtitle: "",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
@@ -79,11 +69,11 @@ define([],
 			//Modify this to point to your sharing service URL if you are using the portal
 			sharingurl: "http://www.arcgis.com/sharing/rest/content/items",
 		  //Maximum zoom level allowed in the storymap (0 - 20)
-			maximumZoom: 20,
+			maximumZoom: 8,
 
       //Social Media Configurations
 		  //Include logo in header
-		  includeLogo: true,
+		  includeLogo: false,
 		  //Logo Image URL for header logo:
 		  logoImgUrl: "resources/images/app/MapscomLogo.png",
 		  //URL to load when logo is clicked:
