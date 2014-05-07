@@ -412,11 +412,13 @@ define(["esri/map",
 				$("#side-pane").stop(true,true).slideUp();
 				$("#legend-pane").stop(true,true).slideUp();
 			});
+    
+		  //var zoomToNode = dojo.query("a.action.zoomTo");
+		  //dojo.connect(zoomToNode, "click", function () { alert("zoom to override with dojo.connect"); });
+			$('.action.zoomTo').click(customZoomTo);
+
 		}
 
-	  //var zoomToNode = dojo.query("a.action.zoomTo");
-	  //dojo.connect(zoomToNode, "click", function () { alert("zoom to override with dojo.connect"); });
-		$('.action.zoomTo').click(customZoomTo);
 		function customZoomTo(evt) {
 		  //alert('zoom to override with jQuery');
 		  var thisFeatureExtent = app.currentMap.infoWindow.features[0]._extent;
