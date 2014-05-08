@@ -7,8 +7,8 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-				id: "04744b7ad124458489ea821da3129352",
-				title: "",
+			  id: "2952f10e036b40158686e93b11c224f5",
+			  title: "2000 Presidential Election",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
@@ -16,8 +16,8 @@ define([],
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
 			},{
-				id: "d0f1c5ae11d24c778d597f8bbddcf85f",
-				title: "",
+			  id: "8e5eb76dde2e4986b2b7e7a0469a28ac",
+			  title: "2004 Presidential Election",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
@@ -26,29 +26,29 @@ define([],
 				openLegendOnChange: false
 			},
 			{
-				id: "bb5a3da962ac4040b2f52f5869fddbd8",
-				title: "",
+			  id: "f6a0c17fbab748c19a771c0ec9ecc548",
+			  title: "2008 Presidential Election",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
 				legendVisible: true,
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
-			}
+			},
+      {  
+        id: "05b3a6df2d52484b9badb49b02a25a83",
+        title: "2012 Presidential Election",
+			  	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
+			  	showSingleTimeInstance: false,
+			    // Hide legend and legend toggle for specific map by setting this option to false
+			  	legendVisible: true,
+			    // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+			  	openLegendOnChange: false
+			  	}
 			// To add additional maps to the template, uncomment the below section for
 			// each map you would like to add. Webmap titles from ArcGIS Online will
 			// be used unless you fill in title attribute.
-			//, {
-			//
-			//	id: "739db23c3f674005a405c68e337f5011",
-			//	title: "",
-			//	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
-			//	showSingleTimeInstance: false,
-			//  // Hide legend and legend toggle for specific map by setting this option to false
-			//	legendVisible: true,
-			//  // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
-			//	openLegendOnChange: false
-			//	},{
+			//,{
 			//
 			//	id: "739db23c3f674005a405c68e337f5011",
 			//	title: "",
@@ -61,9 +61,9 @@ define([],
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.
-			title: "",
+			title: "Popular and Electoral Votes, 2000 - 2012",
 			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
-			subtitle: "",
+			subtitle: "Compare the popular vote count with the winner of each state in recent presidential elections.",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
 			startCountOnSecondTab: false,
 			//Sync maps scale and location
@@ -79,11 +79,11 @@ define([],
 			//Modify this to point to your sharing service URL if you are using the portal
 			sharingurl: "http://www.arcgis.com/sharing/rest/content/items",
 		  //Maximum zoom level allowed in the storymap (0 - 20)
-			maximumZoom: 20,
+			maximumZoom: 8,
 
       //Social Media Configurations
 		  //Include logo in header
-		  includeLogo: true,
+		  includeLogo: false,
 		  //Logo Image URL for header logo:
 		  logoImgUrl: "resources/images/app/MapscomLogo.png",
 		  //URL to load when logo is clicked:
