@@ -7,7 +7,7 @@ define([],
 			//The web map id
 			webmaps: [
 			{
-			  id: "796c5f4a9a004ae0b12ad168bb14a3fa",
+			  id: "b9da11d10bc44164afec939bf5062492",
 				title: "Levels of Freedom",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
