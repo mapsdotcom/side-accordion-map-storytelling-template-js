@@ -8,7 +8,7 @@ define([],
 			webmaps: [
 			{
 			  id: "796c5f4a9a004ae0b12ad168bb14a3fa",
-				title: "",
+				title: "Levels of Freedom",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
@@ -17,7 +17,7 @@ define([],
 				openLegendOnChange: false
 			},{
 			  id: "0d83578f2aef4b8e9af218a6a0702c75",
-				title: "",
+				title: "Political Rights",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
@@ -27,7 +27,7 @@ define([],
 			},
 			{
 			  id: "06548aaf9c34460dbe4e35f3758f23b3",
-				title: "",
+				title: "Civil Liberties",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 				showSingleTimeInstance: false,
 				// Hide legend and legend toggle for specific map by setting this option to false
