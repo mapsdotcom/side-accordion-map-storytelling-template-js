@@ -15,7 +15,8 @@ define([],
 				legendVisible: true,
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
-			},{
+			},
+			{
 			  id: "8e5eb76dde2e4986b2b7e7a0469a28ac",
 			  title: "2004 Presidential Election",
 				// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
