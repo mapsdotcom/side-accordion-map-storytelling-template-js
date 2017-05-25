@@ -85,9 +85,9 @@ define([],
 		  //Include logo in header
 		  includeLogo: false,
 		  //Logo Image URL for header logo:
-		  logoImgUrl: "resources/images/app/MapscomLogo.png",
+		  logoImgUrl: "resources/images/app/MapscomLogo_white.png",
 		  //URL to load when logo is clicked:
-		  logoClickThru: "http://www.maps.com",
+		  logoClickThru: "http://education.maps.com",
 		  //Include Social Media Links in header:
 		  includeSocialMedia: false,
 		  //Some text to precede the social media links:
@@ -97,7 +97,7 @@ define([],
 		  //ShareThis Publisher ID:
 		  shareThisPubId: "",
 		  //ShareThis Twitter Handle - When map is shared via twitter, what Twitter handle should be cited:
-		  twitterViaHandle: "",
+		  twitterViaHandle: "Mapsdotcom",
 
 		  //Pop-up Configurations
 		  //Specify a custom popup width (in pixels) to override application default (min:0,max:1000):
