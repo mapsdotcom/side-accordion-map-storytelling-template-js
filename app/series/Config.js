@@ -45,6 +45,16 @@ define([],
 			  	legendVisible: true,
 			    // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 			  	openLegendOnChange: false
+			},
+			{  
+			  id: "2babbc617249480eb8c060d87145031c",
+			  title: "2016 Presidential Election",
+			  	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
+			  	showSingleTimeInstance: false,
+			    // Hide legend and legend toggle for specific map by setting this option to false
+			  	legendVisible: true,
+			    // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
+			  	openLegendOnChange: false
 			}
 			// To add additional maps to the template, uncomment the below section for
 			// each map you would like to add. Webmap titles from ArcGIS Online will
@@ -62,7 +72,7 @@ define([],
 			//	}
 			],
 			//Enter a title, if no title is specified, the first webmap's title is used.
-			title: "Popular and Electoral Votes, 2000 - 2012",
+			title: "Popular and Electoral Votes, 2000 - 2016",
 			//Enter a subtitle, if no subtitle is specified, the first webmap's subtitle is used.
 			subtitle: "Compare the popular vote count with the winner of each state in recent presidential elections.",
 			// If false, each tab will have a number on it. If true, the first tab will not have a number and the second tab will start counting at 1.
