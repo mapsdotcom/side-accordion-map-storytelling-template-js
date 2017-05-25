@@ -35,16 +35,16 @@ define([],
 				// Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 				openLegendOnChange: false
 			},
-      {  
-        id: "05b3a6df2d52484b9badb49b02a25a83",
-        title: "2012 Presidential Election",
+			{  
+			  id: "05b3a6df2d52484b9badb49b02a25a83",
+			  title: "2012 Presidential Election",
 			  	// If your map has time properties, choose to show a single time instance instead of the time interval saved with the web map.
 			  	showSingleTimeInstance: false,
 			    // Hide legend and legend toggle for specific map by setting this option to false
 			  	legendVisible: true,
 			    // Set to true if you want the legend of this specific map to open when a user selects the tab for this map.
 			  	openLegendOnChange: false
-			  	}
+			}
 			// To add additional maps to the template, uncomment the below section for
 			// each map you would like to add. Webmap titles from ArcGIS Online will
 			// be used unless you fill in title attribute.
