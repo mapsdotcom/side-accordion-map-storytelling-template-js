@@ -73,11 +73,11 @@ define([],
 			// Specify a proxy for custom deployment
 			proxyurl: "",
 			//specify the url to a geometry service
-			geometryserviceurl: "http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
+			geometryserviceurl: "https://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
 			//If the webmap uses Bing Maps data, you will need to provided your Bing Maps Key
 			bingmapskey : "",
 			//Modify this to point to your sharing service URL if you are using the portal
-			sharingurl: "http://www.arcgis.com/sharing/rest/content/items",
+			sharingurl: "https://www.arcgis.com/sharing/rest/content/items",
 		  //Maximum zoom level allowed in the storymap (0 - 20)
 			maximumZoom: 8,
 
@@ -87,7 +87,7 @@ define([],
 		  //Logo Image URL for header logo:
 		  logoImgUrl: "resources/images/app/MapscomLogo_white.png",
 		  //URL to load when logo is clicked:
-		  logoClickThru: "http://education.maps.com",
+		  logoClickThru: "https://education.maps.com",
 		  //Include Social Media Links in header:
 		  includeSocialMedia: false,
 		  //Some text to precede the social media links:
